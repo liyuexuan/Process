@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import studio.debbili.process.data.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        initTest();
+    }
+
+    private void initTest() {
+        DatabaseHelper helper = new DatabaseHelper(this);
+        Log.i("debbili", "db name = "+helper.getDatabaseName());
     }
 
 
