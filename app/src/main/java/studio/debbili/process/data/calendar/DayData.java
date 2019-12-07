@@ -13,6 +13,7 @@ public class DayData {
 	private int day;
 	private int month;
 	private boolean isCurrentMonth;
+	private boolean isCurrentDay;
 	private int eventStatus;
 
 	public int getKey() {
@@ -45,6 +46,14 @@ public class DayData {
 
 	public void setCurrentMonth(boolean currentMonth) {
 		isCurrentMonth = currentMonth;
+	}
+
+	public boolean isCurrentDay() {
+		return isCurrentDay;
+	}
+
+	public void setCurrentDay(boolean currentDay) {
+		isCurrentDay = currentDay;
 	}
 
 	public int getEventStatus() {

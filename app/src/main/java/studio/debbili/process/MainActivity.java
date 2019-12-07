@@ -1,5 +1,6 @@
 package studio.debbili.process;
 
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import studio.debbili.process.data.DatabaseHelper;
+import studio.debbili.process.fragment.MainFragment;
+import studio.debbili.process.utils.CalendarUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+        tabLayout.getTabAt(1).select();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_test, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -148,6 +152,9 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            if(position == 1) {
+                return MainFragment.newInstance();
+            }
             return PlaceholderFragment.newInstance(position + 1);
         }
 

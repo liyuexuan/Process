@@ -3,38 +3,33 @@ package studio.debbili.process.view.calendar;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import studio.debbili.process.R;
+import studio.debbili.process.view.FunImageView;
 
 /**
  * Created by Debbili on 2019/11/24.
  */
-public class CalendarHeaderView extends LinearLayout {
+public class FunCalendarHeaderView extends LinearLayout {
 
-	private TextView tvMonth;
+	private FunImageView fvMonth;
 	private TextView tvDetail;
 	private TextView tvToDo;
 
-	public CalendarHeaderView(Context context) {
+	public FunCalendarHeaderView(Context context) {
 		super(context, null);
-		inflate(context, R.layout.event_calendar_header, this);
-		initView(context);
 	}
 
-	public CalendarHeaderView(Context context, @Nullable AttributeSet attrs) {
+	public FunCalendarHeaderView(Context context, @Nullable AttributeSet attrs) {
 		super(context, attrs);
-		inflate(context, R.layout.event_calendar_header, this);
+		inflate(context, R.layout.fun_event_calendar_header, this);
 		initView(context);
 	}
 
 	private void initView(Context context) {
-		tvMonth = findViewById(R.id.calendar_header_month);
+		fvMonth = findViewById(R.id.calendar_header_month);
 		tvDetail = findViewById(R.id.calendar_header_detail);
 		tvToDo = findViewById(R.id.calendar_header_todo);
 	}
@@ -46,8 +41,8 @@ public class CalendarHeaderView extends LinearLayout {
 	}
 
 	public void setMonth(String month) {
-		if(tvMonth != null) {
-			tvMonth.setText(month);
+		if(fvMonth != null) {
+			fvMonth.setShowText(month);
 		}
 	}
 

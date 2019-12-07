@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/margin_horizontal_common"
     android:paddingRight="@dimen/margin_horizontal_common">
 
-    <studio.debbili.process.view.calendar.CalendarHeaderView
+    <studio.debbili.process.view.calendar.FunCalendarHeaderView
         android:id="@+id/calendar_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

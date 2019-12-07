@@ -8,13 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
+        <ImageView
+            android:id="@+id/calendar_header_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_left"/>
+        <studio.debbili.process.view.FunImageView
             android:id="@+id/calendar_header_month"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="十一月"/>
+            android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/calendar_header_detail"
             android:layout_width="wrap_content"
@@ -28,53 +30,58 @@
             android:layout_weight="1"
             android:gravity="right"
             android:text="1 项待办"/>
+        <ImageView
+            android:id="@+id/calendar_header_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_right"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:orientation="horizontal">
-        <TextView
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_mon"/>
-        <TextView
+            android:src="@drawable/up_one"/>
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_tue"/>
-        <TextView
+            android:src="@drawable/up_two"/>
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_wed"/>
-        <TextView
+            android:src="@drawable/up_three"/>
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_thur"/>
-        <TextView
+            android:src="@drawable/up_four"/>
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_fri"/>
-        <TextView
+            android:src="@drawable/up_five"/>
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_sat"/>
-        <TextView
+            android:src="@drawable/up_six"/>
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/weekday_short_sun"/>
+            android:src="@drawable/up_day"/>
     </LinearLayout>
 </LinearLayout>
